@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Engineering Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+/* ======================
+GLOBAL STYLE
+====================== */
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:white;
+
+    background:
+        radial-gradient(circle at center,
+        #1a1a1a 20%,
+        #000000 60%);
+
+    overflow-x:fixed;
+    scroll-behavior:smooth;
+}
+
+/* ======================
+CYBER GRID BACKGROUND
+====================== */
+
+.grid-bg{
+    position:smooth;
+    top:0;
+    left:0;
+    width:10%;
+    height:10%;
+    z-index:-1;
+
+    background:
+        radial-gradient(circle at center,
+        rgba(120,120,120,1),
+        rgba(0,0,0,1) 65%),
+        repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.5) 3px,
+        rgba(255,255,255,0.5) 5px,
+        transparent 1px,
+        transparent 60px),
+        repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.05) 3px,
+        rgba(255,255,255,0.05) 5px,
+        transparent 1px,
+        transparent 60px);
+
+    background-size:cover;
+    animation:gridMove 25s linear infinite;
+}
+
+@keyframes gridMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(200px);}
+}
+
+/* ======================
+NAVBAR
+====================== */
+
+nav{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(6px);
+    z-index:10;
+}
+
+nav h2{
+    font-family:'Orbitron';
+    color:#ff7b00;
+    border:1px solid rgba(255,123,0,0.4);
+    position:relative;
+    padding:10px 20px;
+
+  
+}
+
+nav a{
+    margin-left:25px;
+    font-family:'Orbitron';
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+  
+}
+
+nav a:hover{
+    color:#ff7b00;
+    
+}
+
+/* ======================
+HERO SECTION
+====================== */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Orbitron';
+    font-size:4rem;
+    letter-spacing:6px;
+    animation:glowPulse 2s infinite alternate;
+}
+
+.hero p{
+    color:#ccc;
+    max-width:550px;
+}
+
+@keyframes glowPulse{
+    from{
+        text-shadow:
+        0 0 10px #ff7b00,
+        0 0 20px #ff7b00;
+    }
+    to{
+        text-shadow:
+        0 0 25px #ff7b00,
+        0 0 50px #ff7b00;
+    }
+}
+
+.button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:1px solid #ff7b00;
+    color:#ff7b00;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#ff7b00;
+    color:black;
+}
+
+/* ======================
+PROJECT SECTION
+====================== */
+
+.section{
+    padding:70px 10%;
+}
+
+.section h2{
+    font-family:'Orbitron';
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.projects{
+    display:column;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:100px;
+}
+
+.card{
+    border:1px solid rgba(255,123,0,0.4);
+    padding:30px;
+    background:rgba(20,20,20,0.6);
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+    text-align: center;
+    font-family: 'Orbitron';
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 80px rgba(255,123,0,.5);
+}
+
+.card h3{
+    color:#ff7b00;
+}
+
+/* ======================
+SCROLL FADE ANIMATION
+====================== */
+
+.fade{
+    opacity:10;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.visible{
+    opacity:10;
+    transform:translateY(0);
+}
+
+/* ======================
+FOOTER
+====================== */
+
+footer{
+    text-align:center;
+    padding:60px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+<h2>ENGINEER</h2>
+<div>
+<a href="#">Projects</a>
+<a href="#">Case Studies</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>DESIGN. AUTOMATE. OPTIMIZE.</h1>
+<p>
+Bridging engineering, computation, and manufacturing
+to build intelligent scalable systems.
+</p>
+<a class="button" href="#">VIEW PROJECTS</a>
+</section>
+
+<section class="section">
+<h2>FEATURED PROJECTS</h2>
+
+<div class="projects">
+
+<div class="card fade">
+<h3>Artaic Parametric Grid System</h3>
+<p>
+Variable-driven tile generation system built in Onshape
+reducing manufacturing lead time.
+</p>
+</div>
+
+<div class="card fade">
+<h3>Cooper V1 </h3>
+<p>
+6 Axis Robotic Arm. Simulation model enabling validation,
+optimization, and automation workflows.
+</p>
+</div>
+
+<div class="card fade">
+<h3>Continuous Improvement Workflow</h3>
+<p>
+Engineering workflow automation improving
+system reliability and production throughput.
+</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Engineering Portfolio — Built With Code
+</footer>
+
+<script>
+
+/* ======================
+SCROLL ANIMATION
+====================== */
+
+const faders=document.querySelectorAll('.fade');
+
+const appear=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+faders.forEach(f=>{
+appear.observe(f);
+});
+
+</script>
+
+</body>
+</html>
