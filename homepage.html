@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+
+    <style>
+
+        /* =====================
+           COLOR SYSTEM
+        ====================== */
+
+        :root {
+            --black: #0d0d0d;
+            --dark-grey: #1a1a1a;
+            --light-grey: #2e2e2e;
+            --white: #f5f5f5;
+            --orange: #ff7a00;
+        }
+
+        /* =====================
+           GLOBAL STYLE
+        ====================== */
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        h1, h2, h3 {
+            color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--orange);
+        }
+
+        /* =====================
+           NAVIGATION BAR
+        ====================== */
+
+        nav {
+            background-color: var(--dark-grey);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            color: var(--orange);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav li {
+            cursor: pointer;
+        }
+
+        nav li:hover {
+            color: var(--orange);
+        }
+
+        /* =====================
+           HERO SECTION
+        ====================== */
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 20px;
+        }
+
+        /* =====================
+           PROJECT SECTION
+        ====================== */
+
+        .projects {
+            padding: 60px;
+            background-color: var(--dark-grey);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: var(--light-grey);
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border: 1px solid var(--orange);
+        }
+
+        /* =====================
+           FOOTER
+        ====================== */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--black);
+            color: grey;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Engineer Portfolio</h1>
+        <ul>
+            <li>Projects</li>
+            <li>Case Studies</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Computational Design Engineer</h2>
+        <p>Parametric Design • Automation • Digital Manufacturing</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Parametric Grid System</h3>
+                <p>Variable-driven manufacturing workflow built in Onshape.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Digital Twin Gantry</h3>
+                <p>Simulation model for automated XY production systems.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Automation Workflow</h3>
+                <p>Process optimization using engineering data pipelines.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Engineering Portfolio
+    </footer>
+
+</body>
+</html>
