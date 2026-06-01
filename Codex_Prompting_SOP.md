@@ -1,4 +1,4 @@
-#ajhoagland_Codex_SOP
+# ajhoagland_Codex_SOP
 
 When Prompintg with Codex Using a bullet point structure offers clear and concises lines items the AI must fullfil. 
 Giving the AI one job at a time is also highly effecytive. 
