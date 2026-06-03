@@ -107,6 +107,32 @@ a {
     text-decoration: none;
 }
 
+.brand-lockup {
+    display: grid;
+    gap: 2px;
+    min-width: 214px;
+    padding: 9px 22px 10px;
+    line-height: 1.1;
+}
+
+.brand-lockup span,
+.brand-lockup small {
+    display: block;
+}
+
+.brand-lockup span {
+    font-size: 0.98rem;
+}
+
+.brand-lockup small {
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 .brand::before,
 .brand::after {
     content: "";
@@ -482,6 +508,17 @@ a {
     align-items: stretch;
 }
 
+.about-hero {
+    min-height: 62vh;
+}
+
+.about-page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+    gap: 36px;
+    align-items: start;
+}
+
 .about-panel,
 .case-card,
 .project-detail,
@@ -508,6 +545,168 @@ a {
 
 .about-panel .button {
     margin-top: 34px;
+}
+
+.about-statement {
+    border-color: rgba(255, 123, 0, 0.26);
+    box-shadow:
+        0 0 34px rgba(255, 123, 0, 0.08),
+        inset 0 0 28px rgba(255, 123, 0, 0.06);
+}
+
+.about-statement::before,
+.about-learning-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255, 123, 0, 0.16), transparent 28%, transparent 72%, rgba(255, 123, 0, 0.1)),
+        repeating-linear-gradient(0deg, rgba(255, 123, 0, 0.045) 0, rgba(255, 123, 0, 0.045) 1px, transparent 1px, transparent 18px);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.about-statement > *,
+.about-learning-panel > * {
+    position: relative;
+    z-index: 1;
+}
+
+.about-learning-panel {
+    position: sticky;
+    top: calc(var(--header-height) + 28px);
+    display: grid;
+    gap: 20px;
+}
+
+.learning-track {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.learning-track span {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 123, 0, 0.64);
+    color: var(--orange);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.84rem;
+    box-shadow: 0 0 14px rgba(255, 123, 0, 0.14);
+}
+
+.learning-track h3 {
+    margin-bottom: 6px;
+    color: var(--white);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+    line-height: 1.35;
+}
+
+.learning-track p {
+    color: #c8c8c8;
+    font-size: 0.95rem;
+}
+
+.about-capability-section {
+    padding-top: 28px;
+}
+
+.about-education-section {
+    padding-top: 32px;
+}
+
+.about-skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.book-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 176px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+        linear-gradient(180deg, rgba(20, 20, 20, 0.78), rgba(8, 8, 8, 0.82)),
+        repeating-linear-gradient(120deg, rgba(255, 123, 0, 0.06) 0, rgba(255, 123, 0, 0.06) 1px, transparent 1px, transparent 22px);
+    backdrop-filter: blur(10px);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.book-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: var(--orange);
+    transition: 0.7s ease;
+}
+
+.book-card::after {
+    content: "";
+    position: absolute;
+    right: -38px;
+    bottom: -38px;
+    width: 116px;
+    height: 116px;
+    border: 1px solid rgba(255, 123, 0, 0.2);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 123, 0, 0.34);
+    box-shadow:
+        0 0 24px rgba(255, 123, 0, 0.16),
+        inset 0 0 24px rgba(255, 123, 0, 0.06);
+}
+
+.book-card:hover::before {
+    left: 100%;
+}
+
+.book-card span {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 123, 0, 0.68);
+    color: var(--orange);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.78rem;
+    box-shadow: 0 0 14px rgba(255, 123, 0, 0.14);
+}
+
+.book-card h3 {
+    max-width: 96%;
+    color: var(--white);
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(0.92rem, 1.2vw, 1.06rem);
+    letter-spacing: 1px;
+    line-height: 1.35;
+}
+
+.book-card p {
+    margin-top: 12px;
+    color: #c8c8c8;
+    font-size: 0.95rem;
 }
 
 .about-glow {
@@ -876,6 +1075,7 @@ footer {
 
 @media (max-width: 950px) {
     .about-container,
+    .about-page-layout,
     .contact-layout,
     .project-feature,
     .workflow-detail,
@@ -887,6 +1087,16 @@ footer {
     .workflow-intro {
         position: relative;
         top: auto;
+    }
+
+    .about-learning-panel {
+        position: relative;
+        top: auto;
+    }
+
+    .about-skill-grid,
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .project-detail .button {
@@ -1001,6 +1211,11 @@ footer {
         padding: 28px;
     }
 
+    .about-skill-grid,
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1008,6 +1223,19 @@ footer {
         padding: 9px 16px;
         font-size: 0.9rem;
         letter-spacing: 2px;
+    }
+
+    .brand-lockup {
+        min-width: 176px;
+    }
+
+    .brand-lockup span {
+        font-size: 0.82rem;
+    }
+
+    .brand-lockup small {
+        font-size: 0.58rem;
+        letter-spacing: 1.4px;
     }
 
     .hero-actions,
