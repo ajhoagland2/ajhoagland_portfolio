@@ -300,6 +300,26 @@ a {
     font-size: 1.08rem;
 }
 
+.role-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 24px;
+}
+
+.role-strip span {
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 123, 0, 0.42);
+    background: rgba(5, 5, 5, 0.58);
+    color: var(--white);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    box-shadow: 0 0 14px rgba(255, 123, 0, 0.12);
+}
+
 .eyebrow {
     color: var(--orange);
     font-family: "Orbitron", sans-serif;
@@ -769,6 +789,52 @@ a {
     gap: 28px;
 }
 
+.answer-section {
+    padding-top: 36px;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.answer-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+        linear-gradient(180deg, rgba(20, 20, 20, 0.78), rgba(8, 8, 8, 0.82)),
+        repeating-linear-gradient(120deg, rgba(255, 123, 0, 0.055) 0, rgba(255, 123, 0, 0.055) 1px, transparent 1px, transparent 22px);
+    backdrop-filter: blur(10px);
+}
+
+.answer-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--orange);
+    opacity: 0.68;
+}
+
+.answer-card h3 {
+    margin-bottom: 14px;
+    color: var(--orange);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    line-height: 1.35;
+}
+
+.answer-card p {
+    color: #d0d0d0;
+}
+
 .project-page-hero {
     min-height: 58vh;
 }
@@ -944,15 +1010,17 @@ a {
 }
 
 #artaic.project-detail,
-#cooper.project-detail,
-#workflow.project-detail {
+#workflow.project-detail,
+#wat.project-detail,
+#cooper.project-detail {
     grid-template-columns: minmax(180px, 0.72fr) minmax(220px, 1fr) 172px;
     padding-left: 360px;
 }
 
 #artaic .button,
-#cooper .button,
-#workflow .button {
+#workflow .button,
+#wat .button,
+#cooper .button {
     width: 172px;
 }
 
@@ -1076,6 +1144,7 @@ footer {
 @media (max-width: 950px) {
     .about-container,
     .about-page-layout,
+    .answer-grid,
     .contact-layout,
     .project-feature,
     .workflow-detail,
@@ -1103,13 +1172,49 @@ footer {
         width: fit-content;
     }
 
+    #artaic .button,
+    #workflow .button,
+    #wat .button,
+    #cooper .button {
+        width: fit-content;
+    }
+
+    #artaic.project-detail,
+    #workflow.project-detail,
+    #wat.project-detail,
+    #cooper.project-detail {
+        grid-template-columns: 1fr;
+        padding-left: 34px;
+    }
+
+    .project-detail .project-thumb-tall {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 320px;
+        border: 1px solid rgba(255, 123, 0, 0.7);
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
     .projects {
+        display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0 24px;
         max-width: 760px;
+        min-height: auto;
     }
 
     .card {
+        position: relative;
+        top: auto;
+        left: auto;
         grid-column: span 4;
+        width: 100%;
     }
 
     .card:nth-child(1) {
@@ -1195,6 +1300,7 @@ footer {
         padding: 48px 34px;
     }
 
+    .card:nth-child(1),
     .card:nth-child(2),
     .card:nth-child(3) {
         grid-column: 1;
@@ -1240,6 +1346,13 @@ footer {
 
     .hero-actions,
     .button {
+        width: 100%;
+    }
+
+    #artaic .button,
+    #workflow .button,
+    #wat .button,
+    #cooper .button {
         width: 100%;
     }
 
