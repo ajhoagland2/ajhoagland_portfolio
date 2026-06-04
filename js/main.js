@@ -43,20 +43,18 @@ const formStatus = document.querySelector("#form-status");
 
 if (contactForm && formStatus) {
     contactForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-
         const formData = new FormData(contactForm);
         const name = String(formData.get("name") || "").trim();
         const email = String(formData.get("email") || "").trim();
         const message = String(formData.get("message") || "").trim();
 
         if (!name || !email || !message) {
+            event.preventDefault();
             formStatus.textContent = "Please complete every field before sending.";
             return;
         }
 
-        formStatus.textContent = "Message queued. Replace this demo handler with your preferred form service.";
-        contactForm.reset();
+        formStatus.textContent = "Sending your message...";
     });
 }
 
