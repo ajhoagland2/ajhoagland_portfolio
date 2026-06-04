@@ -396,13 +396,13 @@ a {
 
 .projects {
     --hex-card-width: 465px;
-    --hex-card-height: 330px;
+    --hex-card-height: 360px;
     --hex-card-overlap: 465px;
-    --hex-card-gap: 33px;
+    --hex-card-gap: 48px;
     display: block;
     position: relative;
     max-width: calc(var(--hex-card-overlap) + var(--hex-card-width));
-    min-height: calc((var(--hex-card-height) * 2) + var(--hex-card-gap) - 3px);
+    min-height: calc((var(--hex-card-height) * 2) + var(--hex-card-gap));
     margin: 0 auto;
 }
 
@@ -431,13 +431,13 @@ a {
 
 .card:nth-child(2) {
     position: absolute;
-    top: calc(var(--hex-card-height) + var(--hex-card-gap) - 3px);
+    top: calc(var(--hex-card-height) + var(--hex-card-gap));
     left: 0;
 }
 
 .card:nth-child(3) {
     position: absolute;
-    top: calc((var(--hex-card-height) / 2) + (var(--hex-card-gap) / 2) - 1px);
+    top: calc((var(--hex-card-height) / 2) + (var(--hex-card-gap) / 2));
     left: var(--hex-card-overlap);
     z-index: 2;
 }
@@ -1086,6 +1086,10 @@ a {
 .contact-form {
     display: grid;
     gap: 14px;
+}
+
+.form-honeypot {
+    display: none;
 }
 
 .contact-form label {
