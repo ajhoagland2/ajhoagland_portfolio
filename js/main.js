@@ -1,6 +1,27 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
+if (navLinks && !navLinks.querySelector("a[href='workflow.html']")) {
+    const projectsLink = navLinks.querySelector("a[href='projects.html']");
+    const workflowItem = document.createElement("li");
+    const workflowLink = document.createElement("a");
+
+    workflowLink.href = "workflow.html";
+    workflowLink.textContent = "Workflow";
+
+    if (window.location.pathname.endsWith("workflow.html")) {
+        workflowLink.setAttribute("aria-current", "page");
+    }
+
+    workflowItem.appendChild(workflowLink);
+
+    if (projectsLink && projectsLink.parentElement) {
+        projectsLink.parentElement.insertAdjacentElement("afterend", workflowItem);
+    } else {
+        navLinks.prepend(workflowItem);
+    }
+}
+
 if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
         const isOpen = navToggle.getAttribute("aria-expanded") === "true";
