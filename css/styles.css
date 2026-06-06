@@ -248,7 +248,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.72;
+    opacity: 0.9;
     pointer-events: none;
     -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, rgba(0, 0, 0, 0.72) 76%, transparent 100%);
     mask-image: linear-gradient(180deg, #000 0%, #000 58%, rgba(0, 0, 0, 0.72) 76%, transparent 100%);
@@ -259,8 +259,8 @@ a {
     inset: 0;
     z-index: -1;
     background:
-        linear-gradient(180deg, rgba(5, 5, 5, 0.76), rgba(5, 5, 5, 0.34) 42%, rgba(5, 5, 5, 0.36) 72%, transparent 100%),
-        radial-gradient(circle at center, rgba(255, 123, 0, 0.16), rgba(5, 5, 5, 0.5) 58%, rgba(5, 5, 5, 0.92));
+        linear-gradient(180deg, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.22) 42%, rgba(5, 5, 5, 0.28) 72%, transparent 100%),
+        radial-gradient(circle at center, rgba(255, 123, 0, 0.12), rgba(5, 5, 5, 0.34) 58%, rgba(5, 5, 5, 0.78));
     -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 62%, rgba(0, 0, 0, 0.62) 82%, transparent 100%);
     mask-image: linear-gradient(180deg, #000 0%, #000 62%, rgba(0, 0, 0, 0.62) 82%, transparent 100%);
     pointer-events: none;
@@ -980,6 +980,38 @@ a {
     padding-top: 80px;
 }
 
+.workflow-page-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.82fr) minmax(360px, 1.18fr);
+    gap: 36px;
+    align-items: start;
+    padding-top: 40px;
+}
+
+.workflow-page-summary {
+    position: sticky;
+    top: calc(var(--header-height) + 28px);
+}
+
+.workflow-document-panel {
+    max-width: 920px;
+    justify-self: center;
+}
+
+.workflow-project-section {
+    padding-top: 40px;
+}
+
+.workflow-application-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.workflow-application-card {
+    min-height: 360px;
+}
+
 .workflow-subproject-layout {
     display: grid;
     grid-template-columns: minmax(320px, 1.05fr) minmax(280px, 0.95fr);
@@ -1152,12 +1184,15 @@ footer {
     .contact-layout,
     .project-feature,
     .workflow-detail,
+    .workflow-page-layout,
+    .workflow-application-grid,
     .workflow-subproject-layout,
     .project-detail {
         grid-template-columns: 1fr;
     }
 
-    .workflow-intro {
+    .workflow-intro,
+    .workflow-page-summary {
         position: relative;
         top: auto;
     }
