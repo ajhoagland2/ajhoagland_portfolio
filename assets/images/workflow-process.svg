@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering workflow</title>
+  <desc id="desc">Nine-step workflow from identify through client handoff, with an iteration loop through observe, measure, design, and review.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f7f7}.bar{fill:#050505}.panel{fill:#fff;stroke:#151515;stroke-width:1.5}.orange{fill:#ff5b00}.white{fill:#fff}.black{fill:#060606}.muted{fill:#111}.accent{fill:#ff5b00}.step{font-family:Arial,Helvetica,sans-serif;font-weight:800}.copy{font-family:Arial,Helvetica,sans-serif;font-size:18px;fill:#111}.small{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#111}.label{font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:800;fill:#fff}.title{font-family:Arial,Helvetica,sans-serif;font-size:64px;font-weight:900;letter-spacing:4px;fill:#fff}.orangeText{fill:#ff5b00;font-weight:800}.icon{fill:none;stroke:#fff;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}.lineIcon{fill:none;stroke:#111;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.arrow{fill:none;stroke:#ff5b00;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#ff5b00"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1024" height="1536"/>
+  <rect x="16" y="14" width="992" height="84" rx="8" class="bar"/>
+  <text x="512" y="77" text-anchor="middle" class="title">WORKFLOW</text>
+
+  <g id="steps">
+    <g transform="translate(16 116)">
+      <rect width="280" height="120" rx="8" class="bar"/><rect x="280" width="540" height="120" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">1</text>
+      <circle cx="108" cy="45" r="26" class="icon"/><path d="M128 66l30 30" class="icon"/><text x="178" y="66" class="label">IDENTIFY</text>
+      <text x="316" y="36" class="copy">&#8226; Define the problem or opportunity.</text><text x="316" y="68" class="copy">&#8226; Understand the goals and success criteria.</text><text x="316" y="100" class="copy">&#8226; Align with stakeholder needs.</text>
+      <circle cx="744" cy="60" r="34" class="lineIcon"/><path d="M744 22v76M706 60h76M724 60a20 20 0 1 0 40 0a20 20 0 1 0-40 0M738 60a6 6 0 1 0 12 0a6 6 0 1 0-12 0" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 264)">
+      <rect width="280" height="136" rx="8" class="bar"/><rect x="280" width="540" height="136" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">2</text>
+      <path d="M80 68c22-28 58-28 82 0c-24 28-60 28-82 0z" class="icon"/><circle cx="121" cy="68" r="14" class="icon"/><text x="178" y="76" class="label">OBSERVE</text>
+      <text x="316" y="34" class="copy">&#8226; Observe the current state in context.</text><text x="316" y="66" class="copy">&#8226; Gather qualitative insights.</text><text x="316" y="98" class="copy">&#8226; Identify patterns, pain points,</text><text x="334" y="124" class="copy">and key stakeholders.</text>
+      <path d="M722 34h54a22 22 0 0 1 0 44h-20l-24 18v-18h-10a22 22 0 0 1 0-44zM738 54h32M746 66h18M690 118c0-24 48-24 48 0M764 118c0-24 48-24 48 0M724 118c0-28 54-28 54 0" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 428)">
+      <rect width="280" height="124" rx="8" class="bar"/><rect x="280" width="540" height="124" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">3</text>
+      <path d="M91 84l50-66l22 17l-50 66zM110 60l14 10M124 42l12 9M140 26l11 8" class="icon"/><text x="178" y="55" class="label">MEASURE</text><text x="178" y="84" class="label">OBSERVATION</text>
+      <text x="316" y="36" class="copy">&#8226; Collect quantitative data.</text><text x="316" y="68" class="copy">&#8226; Validate observations with facts.</text><text x="316" y="100" class="copy">&#8226; Benchmark current performance.</text>
+      <path d="M682 96h108M682 96v-84M706 82v-20h18v20M736 82v-46h18v46M766 82v-30h18v30M704 48l24-22l28 16l32-30" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 580)">
+      <rect width="280" height="204" rx="8" class="bar"/><rect x="280" width="540" height="204" rx="8" class="panel"/>
+      <circle cx="38" cy="60" r="27" class="orange"/><text x="38" y="78" text-anchor="middle" class="white step" font-size="42">4</text>
+      <path d="M122 54l-36 104M122 54l42 104M96 126h54M122 54a15 15 0 1 0 0.1 0M122 36v-16" class="icon"/><text x="178" y="110" class="label">DESIGN</text>
+      <text x="316" y="30" class="copy orangeText">Think on a systems level to create the optimal solution.</text><text x="316" y="62" class="copy">&#8226; Tolerances &amp; performance</text><text x="316" y="90" class="copy">&#8226; DFM (Design for Manufacturability)</text><text x="316" y="118" class="copy">&#8226; DFA (Design for Assembly)</text><text x="316" y="146" class="copy">&#8226; Material cost</text><text x="316" y="174" class="copy">&#8226; Time constraints / lead time</text><text x="316" y="198" class="copy">&#8226; Design Cost</text>
+      <path d="M720 96m-28 0a28 28 0 1 0 56 0a28 28 0 1 0-56 0M720 50v-22M720 164v-22M674 96h-22M788 96h-22M688 64l-16-16M752 128l16 16M752 64l16-16M688 128l-16 16" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 812)">
+      <rect width="280" height="120" rx="8" class="bar"/><rect x="280" width="540" height="120" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">5</text>
+      <path d="M96 32h54v76H96zM112 22h22v20h-22zM112 58l8 8l16-18M112 82l8 8l16-18" class="icon"/><text x="178" y="67" class="label">REVIEW</text>
+      <text x="316" y="36" class="copy">&#8226; Critically evaluate the design.</text><text x="316" y="68" class="copy">&#8226; Validate against requirements and constraints.</text><text x="316" y="100" class="copy">&#8226; Seek feedback and identify gaps or risks.</text>
+      <path d="M728 26h54a24 24 0 0 1 0 48h-18l-22 18v-18h-14a24 24 0 0 1 0-48zM744 50l14 14l28-30M690 116c0-24 48-24 48 0M758 116c0-24 48-24 48 0M724 116c0-26 58-26 58 0" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 960)">
+      <rect width="280" height="112" rx="8" class="bar"/><rect x="280" width="540" height="112" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">6</text>
+      <path d="M100 90l60-60M144 30l20-20l10 10l-20 20" class="icon"/><text x="178" y="64" class="label">IMPLEMENT</text>
+      <text x="316" y="34" class="copy">&#8226; Execute the plan.</text><text x="316" y="66" class="copy">&#8226; Coordinate resources and timeline.</text><text x="316" y="98" class="copy">&#8226; Monitor progress and adjust as needed.</text>
+      <path d="M710 78m-20 0a20 20 0 1 0 40 0a20 20 0 1 0-40 0M766 48m-24 0a24 24 0 1 0 48 0a24 24 0 1 0-48 0M774 88m-18 0a18 18 0 1 0 36 0a18 18 0 1 0-36 0" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 1100)">
+      <rect width="280" height="112" rx="8" class="bar"/><rect x="280" width="540" height="112" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">7</text>
+      <circle cx="113" cy="58" r="36" class="icon"/><path d="M140 84l28 28M98 72v-18M116 72v-34M134 72v-48" class="icon"/><text x="178" y="64" class="label">REVIEW</text>
+      <text x="316" y="34" class="copy">&#8226; Evaluate results against goals.</text><text x="316" y="66" class="copy">&#8226; Measure impact and performance.</text><text x="316" y="98" class="copy">&#8226; Identify what worked and what didn&apos;t.</text>
+      <path d="M704 20h86v78h-86zM722 80l18-26l18 14l20-34M754 100a22 22 0 1 0 44 0a22 22 0 1 0-44 0M766 100l8 8l16-20" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 1240)">
+      <rect width="280" height="112" rx="8" class="bar"/><rect x="280" width="540" height="112" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">8</text>
+      <path d="M118 26c-28 8-42 32-30 58h60c12-26-2-50-30-58zM102 98h32M108 112h20M118 10v-16M78 28l-14-12M158 28l14-12" class="icon"/><text x="178" y="54" class="label">LESSONS</text><text x="178" y="82" class="label">LEARNED</text>
+      <text x="316" y="34" class="copy">&#8226; Capture key takeaways and insights.</text><text x="316" y="66" class="copy">&#8226; Document learnings for future reference.</text><text x="316" y="98" class="copy">&#8226; Continuously improve the process.</text>
+      <path d="M698 20c28 0 44 10 58 20c14-10 30-20 58-20v76c-28 0-44 10-58 20c-14-10-30-20-58-20zM756 40v76M714 48h28M714 66h28M770 48h28M770 66h28" class="lineIcon"/>
+    </g>
+    <g transform="translate(16 1380)">
+      <rect width="280" height="112" rx="8" class="bar"/><rect x="280" width="540" height="112" rx="8" class="panel"/>
+      <circle cx="38" cy="40" r="27" class="orange"/><text x="38" y="58" text-anchor="middle" class="white step" font-size="42">9</text>
+      <path d="M76 60l34 28M168 60l-34 28M106 58l18 18l24-24" class="icon"/><text x="178" y="48" class="label">CLIENT</text><text x="178" y="77" class="label">HANDOFF</text>
+      <text x="316" y="34" class="copy">&#8226; Deliver solution and documentation.</text><text x="316" y="66" class="copy">&#8226; Ensure knowledge transfer.</text><text x="316" y="98" class="copy">&#8226; Confirm client satisfaction and next steps.</text>
+      <path d="M710 44h86v56h-86zM734 44v-18h38v18M710 66h86M748 60h10v14h-10z" class="lineIcon"/>
+    </g>
+  </g>
+
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 236v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 400v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 552v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 784v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 932v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 1072v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 1212v24"/>
+  <path class="arrow" marker-end="url(#arrowHead)" d="M138 1352v24"/>
+
+  <path class="arrow" marker-end="url(#arrowHead)" d="M868 320h28v548h-28"/>
+  <text x="928" y="654" class="accent step" font-size="48">x3</text>
+  <text x="914" y="698" class="small">Iterate through</text>
+  <text x="914" y="724" class="small">steps 2-5</text>
+  <text x="914" y="750" class="small">approximately</text>
+  <text x="914" y="776" class="small">three times.</text>
+  <text x="914" y="820" class="small">Often performing</text>
+  <text x="914" y="846" class="small">SWOT analysis</text>
+  <text x="914" y="872" class="small">and formulating</text>
+  <text x="914" y="898" class="small">the narrative.</text>
+
+  <rect x="110" y="1506" width="724" height="58" rx="8" fill="#fff" stroke="#ff5b00" stroke-width="2"/>
+  <circle cx="154" cy="1535" r="23" class="black"/>
+  <path d="M143 1534l8 9l18-20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="194" y="1544" class="copy orangeText">GOAL:</text>
+  <text x="278" y="1544" class="copy" font-weight="800">Reliable, Serviceable, and Efficient Solutions.</text>
+</svg>
