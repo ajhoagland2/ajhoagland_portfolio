@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow | Alex Hoagland Systems Specialist</title>
+    <meta name="description" content="Alex Hoagland's engineering workflow for identifying, observing, measuring, designing, reviewing, implementing, and handing off reliable manufacturing and parametric systems.">
+    <meta name="author" content="Alex Hoagland">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Workflow | Alex Hoagland Systems Specialist">
+    <meta property="og:description" content="A repeatable systems workflow used across parametric design, manufacturing analysis, fixture development, and automation planning projects.">
+    <meta property="og:image" content="assets/images/workflow-process.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=workflow-page1">
+    <style>
+        .workflow-page-layout {
+            display: grid;
+            grid-template-columns: minmax(300px, 0.82fr) minmax(360px, 1.18fr);
+            gap: 36px;
+            align-items: start;
+            padding-top: 40px;
+        }
+
+        .workflow-page-summary {
+            position: sticky;
+            top: calc(var(--header-height) + 28px);
+        }
+
+        .workflow-document-panel {
+            max-width: 920px;
+            justify-self: center;
+        }
+
+        .workflow-project-section {
+            padding-top: 40px;
+        }
+
+        .workflow-application-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .workflow-application-card {
+            min-height: 360px;
+        }
+
+        @media (max-width: 950px) {
+            .workflow-page-layout,
+            .workflow-application-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-page-summary {
+                position: relative;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="brand brand-lockup" href="index.html">
+                <span>Alex Hoagland</span>
+                <small>Systems Specialist</small>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="main-menu">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="workflow.html" aria-current="page">Workflow</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero project-page-hero">
+            <p class="eyebrow fade">Engineering Operating System</p>
+            <h1 class="fade">WORKFLOW</h1>
+            <p class="fade">
+                A repeatable project method for turning messy production problems, configurable CAD needs,
+                and early automation ideas into reliable, serviceable, and efficient solutions.
+            </p>
+        </section>
+
+        <section class="section workflow-page-layout">
+            <article class="project-story workflow-page-summary fade">
+                <p class="eyebrow">Process Overview</p>
+                <h2>FROM PROBLEM DEFINITION TO CLIENT HANDOFF</h2>
+                <p>
+                    This workflow starts by identifying the problem or opportunity, observing the current state,
+                    and measuring performance before design work begins. That early discipline keeps solutions
+                    connected to stakeholder needs, real operating constraints, and measurable success criteria.
+                </p>
+                <p>
+                    Design, review, and implementation are treated as an iterative loop. The process deliberately
+                    returns through observation, measurement, design, and review several times so that assumptions
+                    can be tested before a solution is handed off.
+                </p>
+                <p>
+                    The goal is practical: create systems that are reliable enough to run, serviceable enough to
+                    maintain, and efficient enough to justify the effort.
+                </p>
+                <div class="project-highlights">
+                    <div class="stat-card"><span>IDENTIFY AND OBSERVE</span></div>
+                    <div class="stat-card"><span>MEASURE BEFORE DESIGN</span></div>
+                    <div class="stat-card"><span>ITERATE THROUGH REVIEW</span></div>
+                    <div class="stat-card"><span>DOCUMENT AND HAND OFF</span></div>
+                </div>
+            </article>
+
+            <figure class="project-image-panel workflow-document-panel fade">
+                <img src="assets/images/workflow-process.svg" alt="Nine-step engineering workflow diagram from identify through client handoff">
+                <figcaption>Workflow reference for system-level engineering, continuous improvement, design, review, implementation, lessons learned, and client handoff.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section workflow-project-section">
+            <div class="section-heading fade">
+                <p class="eyebrow">Applied Across Projects</p>
+                <h2>HOW THE WORKFLOW SHOWS UP</h2>
+            </div>
+
+            <div class="workflow-application-grid fade">
+                <article class="case-card workflow-application-card">
+                    <p class="eyebrow">01 / Parametric Platform</p>
+                    <h2>Parametric Grid Generation</h2>
+                    <p>
+                        The workflow appears as a move from repetitive CAD pain to a structured design system.
+                        The problem was identified as manual grid generation, then translated into Onshape variables,
+                        configurations, and rule-based logic that preserved manufacturing intent.
+                    </p>
+                    <a class="text-link" href="artaic-parametric-grid-system.html">Explore Project</a>
+                </article>
+
+                <article class="case-card workflow-application-card">
+                    <p class="eyebrow">02 / Manufacturing Analysis</p>
+                    <h2>Artemis Return Chute Optimization</h2>
+                    <p>
+                        This project follows the observe-measure-design loop directly. Instead of assuming the machine
+                        was the only source of variation, the analysis connected equipment behavior, operator actions,
+                        material flow, and recovery methods into one system-level view.
+                    </p>
+                    <a class="text-link" href="continuous-improvement-workflow.html">View Analysis</a>
+                </article>
+
+                <article class="case-card workflow-application-card">
+                    <p class="eyebrow">03 / Fixture Development</p>
+                    <h2>WAT Grid Bracket Development</h2>
+                    <p>
+                        The bracket work used the same method at the workstation scale: observe inconsistent setup,
+                        define the assembly constraints, design for repeatable positioning, and create a fixture that
+                        embeds process knowledge into the hardware.
+                    </p>
+                    <a class="text-link" href="continuous-improvement-workflow.html#wat-grid-bracket">See Fixture</a>
+                </article>
+
+                <article class="case-card workflow-application-card">
+                    <p class="eyebrow">04 / Automation Planning</p>
+                    <h2>Cooper V1 Robotic Arm</h2>
+                    <p>
+                        For robotics exploration, the workflow becomes a validation path: define the target motion,
+                        observe reach and timing constraints, measure simulated performance, and review integration
+                        risks before committing to physical deployment.
+                    </p>
+                    <a class="text-link" href="projects.html#cooper">View Summary</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Engineering Portfolio | Built With Code</p></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
