@@ -241,9 +241,6 @@ a {
 .hero {
     isolation: isolate;
     overflow: hidden;
-    background:
-        linear-gradient(180deg, rgba(5, 5, 5, 0.56), rgba(5, 5, 5, 0.72)),
-        url("../assets/images/artaic-grid-render.jpeg") center / cover no-repeat;
 }
 
 .hero-video {
