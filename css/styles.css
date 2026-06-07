@@ -1643,6 +1643,32 @@ footer {
         line-height: 1.55;
     }
 
+    .about-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-main > section {
+        order: 5;
+    }
+
+    .about-main .about-hero {
+        order: 1;
+    }
+
+    .about-main .about-overview-section {
+        order: 2;
+        padding-top: 42px;
+    }
+
+    .about-main .timeline-section {
+        order: 3;
+    }
+
+    .about-main .about-education-section {
+        order: 4;
+    }
+
     .section {
         padding: 72px 18px;
     }
