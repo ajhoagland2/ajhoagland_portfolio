@@ -19,6 +19,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -239,6 +241,9 @@ a {
 .hero {
     isolation: isolate;
     overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(5, 5, 5, 0.56), rgba(5, 5, 5, 0.72)),
+        url("../assets/images/artaic-grid-render.jpeg") center / cover no-repeat;
 }
 
 .hero-video {
@@ -1242,9 +1247,9 @@ footer {
 
     .projects {
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        gap: 0 24px;
-        max-width: 760px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        max-width: 860px;
         min-height: auto;
     }
 
@@ -1252,26 +1257,22 @@ footer {
         position: relative;
         top: auto;
         left: auto;
-        grid-column: span 4;
         width: 100%;
+        min-height: 280px;
+        padding: 34px;
+        border: 1px solid rgba(255, 123, 0, 0.24);
+        clip-path: none;
     }
 
-    .card:nth-child(1) {
-        grid-column: 1 / span 4;
-        grid-row: 1;
-    }
-
-    .card:nth-child(2) {
-        grid-column: 1 / span 4;
-        grid-row: 2;
-        margin-top: -18px;
-    }
-
+    .card:nth-child(1),
+    .card:nth-child(2),
     .card:nth-child(3) {
-        grid-column: 3 / span 4;
-        grid-row: 1;
-        margin-top: 148px;
-        z-index: 2;
+        position: relative;
+        top: auto;
+        left: auto;
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0;
     }
 
 }
@@ -1313,30 +1314,56 @@ footer {
         padding: 18px;
     }
 
-    .hero,
-    .page-hero {
-        min-height: 86vh;
+    .hero {
+        min-height: 100svh;
         padding-inline: 18px;
+    }
+
+    .page-hero {
+        min-height: 58svh;
+        padding: calc(var(--header-height) + 40px) 18px 48px;
+    }
+
+    .hero-video {
+        display: none;
+    }
+
+    .hero-video-shade {
+        background:
+            linear-gradient(180deg, rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.5) 48%, rgba(5, 5, 5, 0.86)),
+            radial-gradient(circle at center, rgba(255, 123, 0, 0.18), rgba(5, 5, 5, 0.72) 64%);
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .grid-bg {
+        transform: none;
+        animation: none;
+        background:
+            radial-gradient(circle at center, rgba(255, 123, 0, 0.14), transparent 62%),
+            repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 18px),
+            repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 18px),
+            #050505;
     }
 
     .hero h1,
     .page-hero h1 {
-        letter-spacing: 3px;
+        letter-spacing: 1.5px;
     }
 
     .section {
-        padding: 84px 20px;
+        padding: 72px 18px;
     }
 
     .projects {
         grid-template-columns: 1fr;
-        gap: 26px;
+        gap: 18px;
     }
 
     .card {
         grid-column: 1;
         min-height: auto;
-        padding: 48px 34px;
+        padding: 28px;
     }
 
     .card:nth-child(1),
@@ -1353,7 +1380,20 @@ footer {
     .project-story,
     .contact-form,
     .contact-panel {
-        padding: 28px;
+        padding: 24px;
+    }
+
+    .project-detail {
+        gap: 20px;
+    }
+
+    .project-detail .project-thumb-tall {
+        max-height: 220px;
+    }
+
+    .project-detail h2 {
+        font-size: 1.08rem;
+        letter-spacing: 1.5px;
     }
 
     .about-skill-grid,
@@ -1397,7 +1437,18 @@ footer {
 
     .hero h1,
     .page-hero h1 {
-        font-size: 2.35rem;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+    }
+
+    .hero p,
+    .page-hero p {
+        font-size: 0.98rem;
+    }
+
+    .card h3,
+    .answer-card h3 {
+        font-size: 0.98rem;
     }
 }
 
