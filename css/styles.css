@@ -1669,6 +1669,11 @@ footer {
         order: 4;
     }
 
+    .about-main .about-page-layout.fade {
+        opacity: 1;
+        transform: none;
+    }
+
     .section {
         padding: 72px 18px;
     }
