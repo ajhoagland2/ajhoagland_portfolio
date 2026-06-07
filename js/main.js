@@ -59,6 +59,39 @@ if ("IntersectionObserver" in window) {
     faders.forEach((element) => element.classList.add("visible"));
 }
 
+const timelineTrack = document.querySelector("[data-timeline-track]");
+
+if (timelineTrack) {
+    const scrollTimeline = (direction) => {
+        const distance = Math.min(timelineTrack.clientWidth * 0.82, 720);
+
+        timelineTrack.scrollBy({
+            left: direction * distance,
+            behavior: "smooth"
+        });
+    };
+
+    document.querySelectorAll("[data-timeline-scroll]").forEach((button) => {
+        button.addEventListener("click", () => {
+            scrollTimeline(button.dataset.timelineScroll === "prev" ? -1 : 1);
+        });
+    });
+
+    timelineTrack.addEventListener("wheel", (event) => {
+        const canScrollSideways = timelineTrack.scrollWidth > timelineTrack.clientWidth;
+
+        if (!canScrollSideways || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+            return;
+        }
+
+        event.preventDefault();
+        timelineTrack.scrollBy({
+            left: event.deltaY,
+            behavior: "smooth"
+        });
+    }, { passive: false });
+}
+
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 
