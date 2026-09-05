@@ -68,8 +68,10 @@
         ]
     }
     </script>
+    <link rel="stylesheet" href="css/astra.css?v=5.1">
 </head>
-<body>
+<body class="home-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="grid-bg" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -78,7 +80,7 @@
                 <span>Alex Hoagland</span>
                 <small>Portfolio</small>
             </a>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open navigation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -92,62 +94,65 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
-            <video class="hero-video" autoplay muted loop playsinline preload="auto" data-lock-playback="true" aria-hidden="true">
-                <source src="assets/video/orange-holographic-scada.mp4" type="video/mp4" media="(min-width: 761px)">
-            </video>
-            <div class="hero-video-shade" aria-hidden="true"></div>
+            <img class="hero-art" src="assets/images/artaic-wireframe-hero.webp" alt="Orange wireframe illustration of the Artaic parametric manufacturing grid" width="1536" height="1024" fetchpriority="high">
 
             <div class="hero-content fade">
-                <h1>SYSTEMS SPECIALIST & PARAMETRIC DESIGNER</h1>
+                <h1>Systems specialist &amp;<br><span>parametric designer.</span></h1>
                 <p>
                     Focused on the intersection of architecture, manufacturing, automation,
                     product development, and systems optimization.
                 </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#selected-projects">Explore projects <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+                    <a class="button button-secondary" href="contact.html">Get in touch <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="selected-projects">
             <div class="section-heading fade">
                 <p class="eyebrow">Selected Work</p>
-                <h2>SELECTED PROJECTS</h2>
+                <h2>Selected projects</h2>
             </div>
 
             <div class="projects">
-                <article class="card fade">
+                <article class="project-preview fade">
+                    <img class="preview-image" src="assets/images/artaic-grid-render.jpeg" alt="Artaic configurable parametric grid render" loading="lazy" width="720" height="400">
                     <h3>Parametric Grid Generation Platform</h3>
                     <p>
                         Onshape configuration framework that converted repetitive CAD work into a
                         scalable, rule-based design platform for manufacturing-ready grid variants.
                     </p>
-                    <a class="text-link" href="artaic-parametric-grid-system.html">Explore System</a>
+                    <a class="text-link" href="artaic-parametric-grid-system.html">Explore System <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
                 </article>
 
-                <article class="card fade">
+                <article class="project-preview fade">
+                    <img class="preview-image" src="assets/images/continuous-improvement-workflow.jpeg" alt="Artemis return chute manufacturing workflow" loading="lazy" width="720" height="400">
                     <h3>Artemis Return Chute Optimization</h3>
                     <p>
                         System-level production analysis connecting equipment behavior, operator
                         interaction, material flow, and recovery methods to throughput variability.
                     </p>
-                    <a class="text-link" href="continuous-improvement-workflow.html">View Analysis</a>
+                    <a class="text-link" href="continuous-improvement-workflow.html">View Analysis <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
                 </article>
 
-                <article class="card fade">
+                <article class="project-preview fade">
+                    <img class="preview-image" src="assets/images/wat-grid-bracket.jpeg" alt="WAT grid positioning fixture" loading="lazy" width="720" height="400">
                     <h3>WAT Grid Bracket Development</h3>
                     <p>
                         Production fixture that standardized grid positioning, enforced assembly
                         orientation, and reduced operator-dependent variation.
                     </p>
-                    <a class="text-link" href="continuous-improvement-workflow.html#wat-grid-bracket">See Fixture</a>
+                    <a class="text-link" href="continuous-improvement-workflow.html#wat-grid-bracket">See Fixture <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
                 </article>
             </div>
         </section>
 
         <section class="section answer-section" aria-label="Quick answers about Alex Hoagland">
             <div class="section-heading fade">
-                <p class="eyebrow">Quick Answers</p>
-                <h2>QUICK ANSWERS</h2>
+                <h2>Quick answers</h2>
             </div>
 
             <div class="answer-grid fade">

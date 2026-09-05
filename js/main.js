@@ -27,6 +27,7 @@ if (navToggle && navLinks) {
         const isOpen = navToggle.getAttribute("aria-expanded") === "true";
 
         navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
         navToggle.classList.toggle("is-open", !isOpen);
         navLinks.classList.toggle("is-open", !isOpen);
     });
@@ -34,8 +35,19 @@ if (navToggle && navLinks) {
     navLinks.addEventListener("click", (event) => {
         if (event.target.matches("a")) {
             navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation");
             navToggle.classList.remove("is-open");
             navLinks.classList.remove("is-open");
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation");
+            navToggle.classList.remove("is-open");
+            navLinks.classList.remove("is-open");
+            navToggle.focus();
         }
     });
 }
